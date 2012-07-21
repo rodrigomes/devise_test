@@ -1,12 +1,9 @@
 Devise2::Application.routes.draw do
   devise_for :users
 
-  devise_scope :users do
-    root :to => "users#new"
-  end
-
   resources :products
-
+  root :to => 'products#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
